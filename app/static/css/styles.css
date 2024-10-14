@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.a-icon {
+    @apply w-7 h-7 rounded-lg hover:bg-white shadow-xl cursor-pointer justify-center items-center;
+}
