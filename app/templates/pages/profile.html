@@ -1,0 +1,53 @@
+{% extends 'pages/_base.html' %}
+{% block title %}
+  Ammar
+{% endblock %}
+{% block content %}
+  {% include './headers/main-header.html' %}
+
+  <section id="project" class="flex flex-col isolate mb-10">
+    {% set title = 'Projects and Working Experience' %}
+    {% set location = 'An-Najah University' %}
+    {% set image = '/static/images/najah.jpg' %}
+    {% set mid = 'At' %}
+    {% block header %}
+      <div class="fade-header sm:py-30 mx-auto flex max-w-2xl py-20 lg:py-40">
+        <div class="text-center transition-opacity">
+          <h1 class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-4xl font-bold tracking-tight text-gray-900 text-transparent sm:text-6xl">Hi, I'm Ammar</h1>
+          <div class="flex items-center justify-center mt-6 text-lg leading-8 text-gray-600">
+            <p class=""></p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>Palestine, Nablus
+          </div>
+
+          <p class="mt-6 text-lg leading-8 text-gray-600">currently working on nevermind.llc, a prototyping studio making apps and websites that are fun to play with.</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#contact" class="scroll-smooth rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Contact Me</a>
+          </div>
+        </div>
+        <div id="projectails" class="transform transition-all absolute">
+          <div class="h-8 w-8 translate-x-20 translate-y-24 rotate-45 rounded-md bg-black bg-opacity-80"></div>
+          <div class="h-10 w-10 -translate-y-20 translate-x-2 rotate-12 rounded-md bg-black bg-opacity-35"></div>
+          <div class="h-4 w-4 -translate-y-44 translate-x-44 rotate-6 rounded-md bg-gray-800 bg-opacity-70"></div>
+          <div class="h-6 w-6 -translate-y-40 translate-x-96 -rotate-12 rounded-md bg-gray-800 bg-opacity-65"></div>
+          <div class="h-6 w-6 -translate-y-0 translate-x-52 rotate-12 rounded-md bg-gray-800 bg-opacity-10"></div>
+          <div class="translate-y- h-6 w-6 translate-x-96 rotate-45 rounded-md bg-gray-800 bg-opacity-50"></div>
+          <div class="h-6 w-6 -translate-y-40 translate-x-[600px] rotate-6 rounded-md bg-gray-800 bg-opacity-15"></div>
+        </div>
+      </div>
+    {% endblock %}
+
+    {% include './headers/an-najaheader.html' %}
+
+    {% include './sections/an-najah.html' %}
+    {% include './sections/an-najah.html' %}
+    {% include './sections/an-najah.html' %}
+
+    {% set title = 'Freelancing and Data Science' %}
+    {% set location = '' %}
+    {% set mid = '' %}
+    {% include './headers/an-najaheader.html' %}
+  </section>
+{% endblock %}

@@ -9,9 +9,16 @@ app.mount("/static", StaticFiles(directory="./static"), name="static")
 templates = Jinja2Templates(directory="./templates")
 
 
-@app.get("/{username}", response_class=HTMLResponse)
-async def get_profile(request: Request, username: str):
-    user_data = {"name": username, "bio": "This is a sample bio"}  # Example data
-    return templates.TemplateResponse(
-        "profile.html", {"request": request, "user": user_data}
-    )
+@app.get("/", response_class=HTMLResponse)
+async def get_profile(request: Request):
+    return templates.TemplateResponse("pages/profile.html", {"request": request})
+
+
+@app.get("/about", response_class=HTMLResponse)
+async def get_profile(request: Request):
+    return templates.TemplateResponse("pages/about.html", {"request": request})
+
+
+@app.get("/zajel", response_class=HTMLResponse)
+async def get_profile(request: Request):
+    return templates.TemplateResponse("pages/projects/zajel.html", {"request": request})
