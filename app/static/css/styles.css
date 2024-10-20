@@ -6,3 +6,9 @@
 .a-icon {
     @apply w-7 h-7 rounded-lg hover:bg-white shadow-xl cursor-pointer justify-center items-center;
 }
+
+.problem-with-number {
+    @apply flex-none justify-center self-start items-center w-9 h-9 mr-4 font-semibold rounded-full leading-[1.5];
+    color: #fd4e4e; /* Custom color */
+    background-color: #f9e7e7; /* Custom background color */
+}

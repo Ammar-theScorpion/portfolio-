@@ -9,8 +9,8 @@
       <img src="/static/images/zajel/mobile-logo.png" class="h-full" alt="" />
     </div>
   {% endblock %}
-  <div class="flex items-center justify-center flex-col">
-    <div class="w-3/4">
+  <div class="flex items-center justify-center flex-col -translate-y-20">
+    <div class="w-3/4 max-md:mx-8 max-md:w-full">
       <div class="flex -translate-y-8 flex-col">
         <div class="">
           <div id="icon" class="h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-slate-300 p-1 max-w-xl">
@@ -40,19 +40,20 @@
           </div>
 
           <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-4xl font-bold tracking-tight text-gray-900 text-transparent sm:text-6xl">Zajel Mobile</div>
-          <div class="mb-10 text-lg font-bold text-[#5e5e63]">Cross Mobile Platform Developer . 2024</div>
+          <div class="mb-10 text-lg font-bold text-[#5e5e63]">Cross Mobile Platform App . 2024</div>
         </div>
 
         <div class="flex flex-row text-lg leading-7 items-start justify-center max-md:flex-col gap-10">
-          <div class="text-[#323235] w-2/4 flex-initial max-md:w-full">For job seekers, the job card is a key element in the ZipRecruiter interface, but functionally, it presented several issues; it was difficult to read, reuse, and test. I led the effort to improve the job card from usability and system perspectives.</div>
+          <div class="text-[#323235] w-2/4 flex-initial max-md:w-full">Zajel Mobile is a mobile application developed for university students, providing a faster and easier way to access their academic data. The app enhances the user interface and experience, supports both offline and online modes, and sends notifications to students about new updates and upcoming lectures.</div>
 
           <div class="flex w-2/4 flex-initial flex-row max-md:w-full max-md:mt-10 justify-end gap-16">
             <div class="max-md:flex-col max-md:w-2/4">
-              <h1 class="font-mono">ROLE</h1>
+              <div class="text-balance bg-gradient-to-r from-[#323235] to-[#5e5e63] bg-clip-text text-base font-semibold tracking-wider text-gray-900 text-transparent mb-5">ROLE</div>
+
               <div class="text-[#323235]">Project Leader</div>
             </div>
             <div class="max-md:flex-col max-md:w-2/4">
-              <h1 class="font-mono">Responsibilities</h1>
+              <div class="font- text-balance bg-gradient-to-r from-[#323235] to-[#5e5e63] bg-clip-text text-base font-semibold tracking-wider text-gray-900 text-transparent mb-5">RESPONSIBILITIES</div>
               <div class="text-[#323235]">
                 <h1>System Design,</h1>
                 <h1>User Interface Design,</h1>
@@ -69,13 +70,96 @@
             <div class="px-8 py-4">
               <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-lg font-bold tracking-tight text-gray-900 text-transparent mb-5">PROBLEM</div>
 
-              <p class="text-lg">The job card had glaring usability issues and needed to be rebuilt for each new placement, an inefficiency we hoped to correct. Could we redesign the job card to not only improve usability, but also promote consistency and enable powerful testing?</p>
+              <p class="text-lg">The previous version of the Zajel Mobile app faced several challenges that led to negative reviews from users. These issues included a lack of full synchronization with the Zajel Web platform, frequent unexpected logouts, and difficulties handling internet connectivity. Additionally, users experienced slow response times, problems with fetching data, and inconsistent delivery of notifications, which affected the overall user experience.</p>
             </div>
           </div>
 
-          <div class="mt-5 p-5 text-[#5e5e63] text-lg leading-8">Some of our highest traffic pages, like Suggested Jobs and Search Results, displayed lists of hundreds of job cards. The cards gave the user a compact preview of a job and some even allowed users to apply directly with one tap.
+          <div class="mt-5 p-5 text-[#5e5e63] text-lg leading-8">Given the numerous issues with the previous version, I decided to completely recreate the Zajel Mobile app instead of just fixing the existing bugs. One of my main priorities was to significantly improve the user interface and experience. I focused on redesigning key features, such as the student curriculum page, which required a more efficient way to handle and display large amounts of data. I implemented a filter search to make it easier for users to find specific information and reorganized the layout for better readability and usability.</div>
+        </div>
+      </div>
 
-            Our database is made up of millions of jobs from hundreds of different sources, each returning different data than the last. While perfectly formatted jobs exist, a more characteristic job was one with a long title and missing information like a logo or perks.</div>
+      <div class="mt-24">
+        <div class="flex flex-row max-md:flex-col">
+          <div class="flex items-center justify-center w-2/4 flex-col max-md:w-full">
+            <video autoplay muted loop class="w-2/4 h-auto max-w-full border-2 rounded-lg border-[#eceff1] object-cover">
+              <source src="static/video/zajel/old_zajel_courses.mp4" type="video/mp4" />Your browser does not support the video tag.
+            </video>
+            <div class="mt-5 text-[#5e5e63] text-lg leading-8">Old Version</div>
+          </div>
+          <div class="flex items-center justify-center w-2/4 flex-col max-md:w-full">
+            <video autoplay muted loop class="w-2/4 h-auto border-2 rounded-lg border-[#eceff1]">
+              <source src="static/video/zajel/new_zajel_courses.mp4" type="video/mp4" />Your browser does not support the video tag.
+            </video>
+            <div class="mt-5 text-[#5e5e63] text-lg leading-8">New Version</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-center justify-center flex mt-8 flex-col">
+        <div class="w-2/4 text-[#5e5e63] text-lg leading-8">We had spent years tolerating the suboptimal design and were ready for a change. There was a laundry list of usability and visual issues that needed to be addressed;</div>
+      </div>
+
+      <div class="items-start justify-start flex mt-14 flex-row gap-16 max-md:flex-col">
+        <div class="w-full bg-[#f6f6f6] sticky top-20">
+          <div class="flex w-2/5 h-2/5 mx-auto items-center justify-center">
+            <img class="border-2 rounded-lg border-[#eceff1]" src="/static/images/zajel/1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-11">
+          <div class="flex felx-row">
+            <div class="flex-none items-center w-9 h-9 mr-4 font-semibold text-[#fd4e4e] bg-[#f9e7e7] rounded-full leading-[1.5] flex justify-center items-center">1</div>
+            <div class="flex flex-col text-[#5e5e63] leading-8">
+              <p>At the top, there are filters that allow the user to select the status of their curriculum. The available options typically include:</p>
+              <div>
+                <li>Yet to Study: Shows courses that have not yet been started.</li>
+                <li>Studying: Displays courses currently in progress.</li>
+                <li>Failed: Highlights courses that have been failed.</li>
+                <li>Successfully Completed: Lists courses that have been successfully passe</li>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex felx-row">
+            <div class="flex-none items-center w-9 h-9 mr-4 font-semibold text-[#fd4e4e] bg-[#f9e7e7] rounded-full leading-[1.5] flex justify-center items-center">2</div>
+            <div class="flex flex-col text-[#5e5e63] leading-8">
+              <p>Below the status filters, there is another section to filter by the type of curriculum. Users can select from various categories such as:</p>
+              <div>
+                <li>University Mandatory: Courses that are required by the university for all students.</li>
+                <li>Major Mandatory: Courses that are compulsory for a specific major.</li>
+                <li>Additional filters based on curriculum type can also be available, depending on the program.</li>
+              </div>
+            </div>
+          </div>
+          <div class="flex felx-row">
+            <div class="flex-none items-center w-9 h-9 mr-4 font-semibold text-[#fd4e4e] bg-[#f9e7e7] rounded-full leading-[1.5] flex justify-center items-center">3</div>
+            <div class="flex flex-col text-[#5e5e63] leading-8">
+              <p>Once a filter is selected, the courses are displayed with predefined background colors to visually represent the selected status. For example:</p>
+              <div>
+                <li>Courses marked as Studying are highlighted in blue.</li>
+                <li>Courses marked as Failed are highlighted in red.</li>
+                <li>Other statuses, like Yet to Study or Completed, will have their respective colors.</li>
+              </div>
+            </div>
+          </div>
+          <div class="flex felx-row">
+            <div class="flex-none items-center w-9 h-9 mr-4 font-semibold text-[#fd4e4e] bg-[#f9e7e7] rounded-full leading-[1.5] flex justify-center items-center">4</div>
+            <div class="flex flex-col text-[#5e5e63] leading-8">
+              <p>Each course is grouped under its relevant curriculum status. For each course, the following details are provided:</p>
+              <div>
+                <li>Course code and credit hours.</li>
+                <li>Course name and identification number.</li>
+                <li>Grouped and color-coded to match the corresponding curriculum status for clarity and ease of navigation.</li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-md shadow-md mt-8">
+        <div class="px-8 py-4">
+          <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-lg font-bold tracking-tight text-gray-900 text-transparent mb-5">RESARCH</div>
+
+          <p class="text-lg">The job card had glaring usability issues and needed to be rebuilt for each new placement, an inefficiency we hoped to correct. Could we redesign the job card to not only improve usability, but also promote consistency and enable powerful testing?</p>
         </div>
       </div>
     </div>
