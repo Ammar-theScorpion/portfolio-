@@ -22,3 +22,17 @@ async def get_profile(request: Request):
 @app.get("/zajel", response_class=HTMLResponse)
 async def get_profile(request: Request):
     return templates.TemplateResponse("pages/projects/zajel.html", {"request": request})
+
+
+@app.get("/organizer", response_class=HTMLResponse)
+async def get_profile(request: Request):
+    return templates.TemplateResponse(
+        "pages/projects/organizer.html", {"request": request}
+    )
+
+
+@app.get("/vision", response_class=HTMLResponse)
+async def get_profile(request: Request):
+    return templates.TemplateResponse(
+        "pages/projects/e-dentist.html", {"request": request}
+    )
