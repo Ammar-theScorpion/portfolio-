@@ -1,35 +1,22 @@
 <div>
   <header class="inset-x-0 top-0 z-50 sticky">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-14 w-auto rounded-full" src="/static/images/me/me.jpg" alt="myself" />
-        </a>
+      <div class="flex lg:flex-1"></div>
+
+      <div class="flex items-center justify-center">
+        <div class="flex items-center justify-center shadow-xl rounded-full bg-[#f6f6f6]">
+          <a href="/" id="span1" class="m-2 cursor-pointer select-none rounded-full bg-white p-3 font-bold shadow-lg px-6 transition-all active:scale-90">Work</a>
+          <a href="/about" id="span2" class="m-2 cursor-pointer select-none rounded-full p-3 font-bold shadow-lg px-6 transition-all active:scale-90">About</a>
+        </div>
       </div>
-      <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-        <a href="/about" class="text-sm font-semibold leading-6 text-gray-900">About</a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-      </div>
+
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
   </header>
   <div class="relative isolate px-6 lg:px-8 -top-36">
     <div class="absolute inset-x-0 -top-80 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-800 via-slate-700 to-gray-800 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
     {% block header %}
 
@@ -38,4 +25,22 @@
       <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
   </div>
+
+  <script>
+    // Select the spans
+    const span1 = document.getElementById('span1')
+    const span2 = document.getElementById('span2')
+    
+    // Function to toggle active styles
+    function toggleActive() {
+      span1.classList.toggle('bg-white')
+      span1.classList.toggle('text-[#6f6f75]')
+      span2.classList.toggle('bg-white')
+      span2.classList.toggle('text-[#6f6f75]')
+    }
+    
+    // Add click event listeners
+    span1.addEventListener('click', toggleActive)
+    span2.addEventListener('click', toggleActive)
+  </script>
 </div>

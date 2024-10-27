@@ -36,3 +36,8 @@ async def get_profile(request: Request):
     return templates.TemplateResponse(
         "pages/projects/e-dentist.html", {"request": request}
     )
+
+
+@app.get("/games", response_class=HTMLResponse)
+async def get_profile(request: Request):
+    return templates.TemplateResponse("pages/projects/games.html", {"request": request})
