@@ -3,7 +3,7 @@
   About
 {% endblock %}
 {% block content %}
-  {% include './headers/main-header.html' %}
+  {% include './headers/back.html' %}
   {% block header %}
     <div class="flex justify-center items-center h-3/5">
       <div class="flex justify-center space-x-[-20px]">
@@ -19,8 +19,8 @@
   {% endblock %}
 
   <div class="flex items-center justify-center flex-col -translate-y-20">
-    <div class="w-3/4 max-md:mx-8 max-md:w-full">
-      <div class="flex -translate-y-8 flex-col">
+    <div class="w-3/4 mx-8 max-md:w-full">
+      <div class="flex -translate-y-8 max-md:mt-5 flex-col mx-8">
         <div class="">
           <div id="icon" class="h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-slate-300 p-1 max-w-xl">
             <svg xmlns="http://www.w3.org/2000/svg" width="187" height="42" viewBox="0 0 187 42" fill="none">
@@ -222,7 +222,7 @@
         </div>
       </div>
       <div class="mt-14 items-center flex justify-center">
-        <div class="w-3/4">
+        <div class="w-3/4 max-md:w-full">
           <div class="bg-white rounded-md shadow-md">
             <div class="px-8 py-4">
               <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-lg font-bold tracking-tight text-gray-900 text-transparent mb-5">PROBLEM</div>
@@ -238,57 +238,56 @@
         </div>
       </div>
 
-      <div class="items-center justify-center flex mt-8 flex-col">
-        <div class="w-2/4 text-[#5e5e63] text-lg leading-8">We had spent years tolerating the suboptimal design and were ready for a change. There was a laundry list of usability and visual issues that needed to be addressed;</div>
-      </div>
+      <div class="p-5 gap-12 flex-col bg-white rounded-lg shadow-lg mt-10">
+        <p class="mb-5 text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-lg font-bold tracking-tight text-gray-900 text-transparent"></p>
+        <div class="items-start justify-start flex gap-16">
+          <div class="flex items-center justify-center gap-6 max-lg:flex-col">
+            <img src="/static/images/vision/object.png" class="w-96 h-auto rounded-xl transform hover:scale-105 transition duration-300 shadow-lg max-w-full border-2 border-[#eceff1]" />
+            <div class="flex gap-11">
+              <div class="flex-none items-center w-9 h-9 font-semibold bg-[#f6f6f6] text-[#fd4e4e] rounded-full leading-[1.5] flex justify-center">1</div>
+              <div class="text-lg flex flex-col text-[#5e5e63] leading-8">
+                <p>
+                  <span class="text-red-500">Object Detection:</span> This technique detects and labels individual objects within an image by <span class="text-red-500">drawing bounding boxes around them</span>. While it identifies the general location of objects, it doesn’t provide detailed boundaries.
+                </p>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="mx-14 gap-12 flex-col">
-        <div class="items-start justify-start flex mt-14 flex-row gap-16 max-md:flex-col">
-          <div class="bg-[#f6f6f6] max-h-[30vh]">
-            <div class="flex items-center justify-center gap-6">
-              <img class="w-96 h-auto rounded-xl transform hover:scale-105 transition duration-300" src="/static/images/vision/object.png" alt="" />
+        <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
+          <div class="items-center justify-center">
+            <div class="flex items-center justify-center gap-6 max-lg:flex-col">
+              <div class="flex gap-11">
+                <div class="flex-none bg-[#f6f6f6] items-center w-9 h-9 font-semibold text-[#fd4e4e] rounded-full leading-[1.5] flex justify-center">2</div>
+                <div class="flex flex-col text-[#5e5e63] leading-8 text-lg">
+                  <p>
+                    <span class="text-red-500">Segmentation:</span> Unlike object detection, segmentation works on a <span class="text-red-500">pixel level</span> to separate different parts of an image, giving a more refined view of each region without bounding boxes.<div>
+                      <li>
+                        <span class="text-red-500">Semantic Segmentation:</span> This method <span class="text-red-500">classifies each pixel into a specific category</span> (e.g., tooth, gum) but doesn’t distinguish between individual objects of the same type, making it ideal for identifying regions but less precise for tracking multiple, distinct instances.
+                      </li>
+                    </div>
+                  </p>
+                </div>
+              </div>
+
+              <img src="static/images/vision/semantic.png" class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
+            </div>
+          </div>
+        </div>
+
+        <div class="items-start justify-start flex mt-5 flex-row gap-16 max-md:flex-col">
+          <div class="flex items-center justify-center gap-6">
+            <div class="flex gap-11 items-center justify-center max-lg:flex-col">
+              <img src="static/images/vision/instace.png" class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
 
               <div class="flex gap-11">
-                <div class="flex-none items-center w-9 h-9 font-semibold text-[#fd4e4e] bg-[#f9e7e7] rounded-full leading-[1.5] flex justify-center">1</div>
-                <div class="flex flex-col text-[#5e5e63] leading-8">
-                  <p>Object Detection: This technique detects and labels individual objects within an image by drawing bounding boxes around them. While it identifies the general location of objects, it doesn’t provide detailed boundaries.</p>
+                <div class="flex-none items-center w-9 h-9 font-semibold text-[#fd4e4e] bg-[#f6f6f6] rounded-full leading-[1.5] flex justify-center">3</div>
+                <div class="text-lg flex flex-col text-[#5e5e63] leading-8 items-center justify-center">
+                  <p>
+                    <span class="text-red-500">Instance Segmentation:</span> This approach combines <span class="text-red-500">object detection and segmentation</span>, identifying and distinguishing each object instance (e.g., separate teeth) at the <span class="text-red-500">pixel level</span>. It’s particularly effective for dental analysis as it allows precise boundary detection for each tooth or area of concern.
+                  </p>
                   <div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="items-start justify-start flex mt-24 flex-row gap-16 max-md:flex-col mb-24">
-          <div class="bg-[#f6f6f6] max-h-[30vh] items-center justify-center">
-            <div class="flex items-center justify-center gap-6">
-              <div class="flex gap-11">
-                <div class="flex-none items-center w-9 h-9 font-semibold text-[#fd4e4e] bg-[#f9e7e7] rounded-full leading-[1.5] flex justify-center">2</div>
-                <div class="flex flex-col text-[#5e5e63] leading-8">
-                  <p>Segmentation: Unlike object detection, segmentation works on a pixel level to separate different parts of an image, giving a more refined view of each region without bounding boxes.</p>
-                  <div>
-                    <li>Semantic Segmentation: This method classifies each pixel into a specific category (e.g., tooth, gum) but doesn’t distinguish between individual objects of the same type, making it ideal for identifying regions but less precise for tracking multiple, distinct instances.</li>
-                  </div>
-                </div>
-              </div>
-
-              <img class="w-96 h-auto rounded-xl transform hover:scale-105 transition duration-300" src="/static/images/vision/semantic.png" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="items-start justify-start flex mt-20 flex-row gap-16 max-md:flex-col">
-          <div class="bg-[#f6f6f6] max-h-[30vh]">
-            <div class="flex items-center justify-center gap-6">
-              <div class="flex gap-11 items-center justify-center">
-                <img class="w-96 h-auto rounded-xl transform hover:scale-105 transition duration-300" src="/static/images/vision/instace.png" alt="" />
-
-                <div class="flex gap-11">
-                  <div class="flex-none items-center w-9 h-9 font-semibold text-[#fd4e4e] bg-[#f9e7e7] rounded-full leading-[1.5] flex justify-center">3</div>
-                  <div class="flex flex-col text-[#5e5e63] leading-8 items-center justify-center">
-                    <p>Instance Segmentation: This approach combines object detection and segmentation, identifying and distinguishing each object instance (e.g., separate teeth) at the pixel level. It’s particularly effective for dental analysis as it allows precise boundary detection for each tooth or area of concern.</p>
-                    <div></div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -298,7 +297,7 @@
     </div>
 
     <div class="bg-white flex w-full mt-36 justify-center">
-      <div class="p-8 w-3/4">
+      <div class="p-8 w-3/4 max-md:w-full">
         <p class="text-lg">With these considerations in mind, we experimented with both semantic and instance segmentation. However, since our focus is on analyzing each tooth individually and providing detailed insights for each, instance segmentation proved to be the better choice. By distinguishing each tooth and its specific features, instance segmentation allows eDentist AI to deliver the precise, tooth-level analysis essential for accurate diagnostics.</p>
 
         <div class="mt-10">

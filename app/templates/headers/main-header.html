@@ -5,8 +5,10 @@
 
       <div class="flex items-center justify-center">
         <div class="flex items-center justify-center shadow-xl rounded-full bg-[#f6f6f6]">
-          <a href="/" id="span1" class="m-2 cursor-pointer select-none rounded-full bg-white p-3 font-bold shadow-lg px-6 transition-all active:scale-90">Work</a>
-          <a href="/about" id="span2" class="m-2 cursor-pointer select-none rounded-full p-3 font-bold shadow-lg px-6 transition-all active:scale-90">About</a>
+          <a hx-get="/" hx-target="#project" hx-swap="innerHTML" hx-trigger="click" id="span1" class="m-2 cursor-pointer select-none rounded-full bg-white p-3 font-bold shadow-lg px-6 transition-all active:scale-90">Work</a>
+          <a id="span2" class="m-2 cursor-pointer select-none rounded-full p-3 font-bold shadow-lg px-6 transition-all active:scale-90" hx-get="/about" hx-target="#project" hx-swap="innerHTML" hx-trigger="click" hx-on="htmx:beforeSwap: addFadeIn()">About</a>
+
+          <!-- Element where content will be loaded -->
         </div>
       </div>
 
@@ -42,5 +44,14 @@
     // Add click event listeners
     span1.addEventListener('click', toggleActive)
     span2.addEventListener('click', toggleActive)
+    
+    function addFadeIn() {
+      const projectElement = document.getElementById('project')
+      projectElement.classList.add('opacity-0') // Ensure it starts as hidden
+      setTimeout(() => {
+        projectElement.classList.remove('opacity-0') // Fade it in
+        projectElement.classList.add('opacity-100')
+      }, 50) // Small delay to ensure transition works properly
+    }
   </script>
 </div>

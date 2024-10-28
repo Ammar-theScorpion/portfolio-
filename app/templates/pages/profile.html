@@ -5,7 +5,7 @@
 {% block content %}
   {% include './headers/main-header.html' %}
 
-  <section id="project" class="flex flex-col isolate">
+  <section id="project" class="flex flex-col isolate transition-opacity duration-500 opacity-1">
     {% set title = 'Projects and Working Experience' %}
     {% set location = 'An-Najah University' %}
     {% set image = '/static/images/najah.jpg' %}
@@ -45,8 +45,8 @@
 
     <div class="items-center justify-center flex">
       <div class="w-2/3 max-md:w-full">
-        {% include './sections/an-najah.html' %}
         {% include './sections/e-dentist.html' %}
+        {% include './sections/an-najah.html' %}
         {% include './sections/games.html' %}
       </div>
     </div>

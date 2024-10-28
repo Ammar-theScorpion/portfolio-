@@ -3,7 +3,7 @@
   About
 {% endblock %}
 {% block content %}
-  {% include './headers/main-header.html' %}
+  {% include './headers/back.html' %}
   {% block header %}
     <div class="flex justify-center items-center h-3/5">
       <div class="flex justify-center space-x-[-20px] w-3/4 max-md:gap-20 max-md:mx-10 max-md:flex-col">
@@ -23,10 +23,10 @@
   {% endblock %}
 
   <div class="flex items-center justify-center flex-col">
-    <div class="w-3/4 max-md:mx-8">
+    <div class="w-3/4 max-md:mx-8 max-md:w-full">
       <div class="flex -translate-y-8 flex-col">
         <div class="">
-          <div id="icon" class="h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-slate-300 p-1 max-w-xl">
+          <div id="icon" class="h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-pink-400 p-1 max-w-xl">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="37" width="37" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
               <path style="fill:#2C6991;" d="M255.403,220.142c-9.301,0-16.842-7.541-16.842-16.842v-23.874c0-36.932,30.047-66.98,66.98-66.98  h125.345c11.118,0,20.163-9.045,20.163-20.163c0-11.119-9.045-20.164-20.163-20.164H401.67c-9.301,0-16.842-7.541-16.842-16.842  s7.541-16.842,16.842-16.842h29.215c29.692,0,53.848,24.156,53.848,53.849c0,29.692-24.156,53.848-53.848,53.848H305.54  c-18.359,0-33.296,14.937-33.296,33.296V203.3C272.245,212.601,264.704,220.142,255.403,220.142z" />
               <path style="fill:#ABA8AB;" d="M286.316,225.713h-61.754c-9.301,0-16.842-7.541-16.842-16.842s7.541-16.842,16.842-16.842h61.754  c9.301,0,16.842,7.541,16.842,16.842S295.617,225.713,286.316,225.713z" />
@@ -46,15 +46,15 @@
             </svg>
           </div>
 
-          <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-4xl font-bold tracking-tight text-gray-900 text-transparent sm:text-6xl">Games</div>
+          <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-3xl font-bold tracking-tight text-gray-900 text-transparent">Games, Animations and Simulations</div>
           <div class="mb-10 text-lg font-bold text-[#5e5e63]">Some of Games and Animations I made</div>
         </div>
       </div>
 
-      <div class="p-10 gap-12 flex-col bg-white rounded-lg shadow-lg">
+      <div class="p-5 gap-12 flex-col bg-white rounded-lg shadow-lg">
         <p class="mb-5 text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-lg font-bold tracking-tight text-gray-900 text-transparent">Shortest Path Algorithms</p>
         <div class="items-start justify-start flex gap-16">
-          <div class="flex items-center justify-center gap-6 max-md:flex-col">
+          <div class="flex items-center justify-center gap-6 max-lg:flex-col">
             <video autoplay muted loop class="w-96 h-auto rounded-xl transform hover:scale-105 transition duration-300 shadow-lg max-w-full border-2 border-[#eceff1]">
               <source src="static/video/games/breadth.mp4" type="video/mp4" />Your browser does not support the video tag.
             </video>
@@ -75,7 +75,7 @@
 
         <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
           <div class="items-center justify-center">
-            <div class="flex items-center justify-center gap-6 max-md:flex-col">
+            <div class="flex items-center justify-center gap-6 max-lg:flex-col">
               <div class="flex gap-11">
                 <div class="flex-none bg-[#f6f6f6] items-center w-9 h-9 font-semibold text-[#fd4e4e] rounded-full leading-[1.5] flex justify-center">2</div>
                 <div class="flex flex-col text-[#5e5e63] leading-8 text-lg">
@@ -96,7 +96,7 @@
 
         <div class="items-start justify-start flex mt-5 flex-row gap-16 max-md:flex-col">
           <div class="flex items-center justify-center gap-6">
-            <div class="flex gap-11 items-center justify-center max-md:flex-col">
+            <div class="flex gap-11 items-center justify-center max-lg:flex-col">
               <video autoplay muted loop class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]">
                 <source src="static/video/games/best.mp4" type="video/mp4" />Your browser does not support the video tag.
               </video>
@@ -117,7 +117,7 @@
         </div>
         <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
           <div class="items-center justify-center">
-            <div class="flex items-center justify-center gap-6 max-md:flex-col">
+            <div class="flex items-center justify-center gap-6 max-lg:flex-col">
               <div class="flex gap-11">
                 <div class="flex-none bg-[#f6f6f6] items-center w-9 h-9 font-semibold text-[#fd4e4e] rounded-full leading-[1.5] flex justify-center">4</div>
                 <div class="flex flex-col text-[#5e5e63] leading-8 text-lg">
@@ -214,47 +214,49 @@
           </div>
         </div>
 
-        <span class="self-center bg-gradient-to-tl from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent text-xl font-bold">Chess</span>
+        <div class="flex items-center justify-center gap-6 flex-col">
+          <span class="self-center bg-gradient-to-tl from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent text-xl font-bold">Chess</span>
 
-        <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
-          <div class="items-center justify-center">
-            <div class="flex items-center justify-center gap-6 flex-col">
-              <div class="flex flex-col">
-                <div class="flex items-center justify-center w-full h-auto max-md:w-full">
-                  <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
-                    <img src="static/images/chess/chess 3.png" alt="Dog" class="w-auto h-72 rounded-xl transform hover:scale-105 transition duration-300" />
-                    <div class="mt-5 text-[#5e5e63] text-lg leading-8">Queued Games</div>
-                  </div>
+          <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
+            <div class="items-center justify-center">
+              <div class="flex items-center justify-center gap-6 flex-col">
+                <div class="flex flex-col">
+                  <div class="flex items-center justify-center w-full h-auto max-md:w-full max-md:flex-col">
+                    <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
+                      <img src="static/images/chess/chess 3.png" alt="Dog" class="w-auto h-72 rounded-xl transform hover:scale-105 transition duration-300" />
+                      <div class="mt-5 text-[#5e5e63] text-lg leading-8">Queued Games</div>
+                    </div>
 
-                  <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
-                    <img src="static/images/chess/chess 2.png" alt="Dog" class="w-auto h-72 rounded-xl transform hover:scale-105 transition duration-300" />
-                    <span class="mt-5 text-[#5e5e63] text-lg leading-8">Go Online/Offline</span>
+                    <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
+                      <img src="static/images/chess/chess 2.png" alt="Dog" class="w-auto h-72 rounded-xl transform hover:scale-105 transition duration-300" />
+                      <span class="mt-5 text-[#5e5e63] text-lg leading-8">Go Online/Offline</span>
+                    </div>
                   </div>
-                </div>
-                <div class="flex items-center justify-center w-full h-auto max-md:w-full">
-                  <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
-                    <video autoplay muted loop class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]">
-                      <source src="static/video/games/chess.mp4" type="video/mp4" />Your browser does not support the video tag.
-                    </video>
-                    <div class="mt-5 text-[#5e5e63] text-lg leading-8">Offline Game</div>
-                  </div>
+                  <div class="flex items-center justify-center w-full h-auto max-md:w-full max-md:flex-col">
+                    <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
+                      <video autoplay muted loop class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]">
+                        <source src="static/video/games/chess.mp4" type="video/mp4" />Your browser does not support the video tag.
+                      </video>
+                      <div class="mt-5 text-[#5e5e63] text-lg leading-8">Offline Game</div>
+                    </div>
 
-                  <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
-                    <img src="static/images/chess/new message.png" alt="Dog" class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
-                    <span class="mt-5 text-[#5e5e63] text-lg leading-8">Online with messaging</span>
+                    <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
+                      <img src="static/images/chess/new message.png" alt="Dog" class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
+                      <span class="mt-5 text-[#5e5e63] text-lg leading-8">Online with messaging</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="items-start justify-start flex gap-16">
-          <div class="flex items-center justify-center gap-6 flex-col">
-            <span class="bg-gradient-to-tl from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent text-xl font-bold">Rock Scissors Paper</span>
-            <video autoplay muted loop class="h-auto rounded-xl transform hover:scale-105 transition duration-300 shadow-lg max-w-full border-2 border-[#eceff1]">
-              <source src="static/video/games/rock.mp4" type="video/mp4" />Your browser does not support the video tag.
-            </video>
+          <div class="items-start justify-start flex gap-16">
+            <div class="flex items-center justify-center gap-6 flex-col">
+              <span class="bg-gradient-to-tl from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent text-xl font-bold">Rock Scissors Paper</span>
+              <video autoplay muted loop class="h-auto rounded-xl transform hover:scale-105 transition duration-300 shadow-lg max-w-full border-2 border-[#eceff1]">
+                <source src="static/video/games/rock.mp4" type="video/mp4" />Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
 
