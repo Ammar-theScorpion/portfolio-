@@ -1,11 +1,11 @@
 <div>
   <header class="inset-x-0 top-0 z-50 sticky">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="flex items-center justify-center p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1"></div>
 
       <div class="flex items-center justify-center">
         <div class="flex items-center justify-center shadow-xl rounded-full bg-[#f6f6f6]">
-          <a hx-get="/" hx-target="#project" hx-swap="innerHTML" hx-trigger="click" id="span1" class="m-2 cursor-pointer select-none rounded-full bg-white p-3 font-bold shadow-lg px-6 transition-all active:scale-90">Work</a>
+          <a hx-target="#project" hx-get="/profile" hx-swap="innerHTML" hx-trigger="click" id="span1" class="m-2 cursor-pointer select-none rounded-full bg-white p-3 font-bold shadow-lg px-6 transition-all active:scale-90">Work</a>
           <a id="span2" class="m-2 cursor-pointer select-none rounded-full p-3 font-bold shadow-lg px-6 transition-all active:scale-90" hx-get="/about" hx-target="#project" hx-swap="innerHTML" hx-trigger="click" hx-on="htmx:beforeSwap: addFadeIn()">About</a>
 
           <!-- Element where content will be loaded -->
@@ -30,20 +30,24 @@
 
   <script>
     // Select the spans
-    const span1 = document.getElementById('span1')
-    const span2 = document.getElementById('span2')
+    function toggleSpan2() {
+      span2.classList.remove('bg-gradient-to-l', 'from-indigo-500', 'via-red-500', 'to-blue-500', 'text-transparent', 'bg-clip-text')
+      span2.classList.add('bg-white')
     
-    // Function to toggle active styles
-    function toggleActive() {
-      span1.classList.toggle('bg-white')
-      span1.classList.toggle('text-[#6f6f75]')
-      span2.classList.toggle('bg-white')
-      span2.classList.toggle('text-[#6f6f75]')
+      span1.classList.remove('bg-white')
+      span1.classList.add('text-[#6f6f75]')
+    }
+    
+    function toggleSpan1() {
+      span2.classList.remove('bg-white')
+    
+      span1.classList.add('bg-white')
+      span1.classList.remove('text-[#6f6f75]')
     }
     
     // Add click event listeners
-    span1.addEventListener('click', toggleActive)
-    span2.addEventListener('click', toggleActive)
+    span1.addEventListener('click', toggleSpan1)
+    span2.addEventListener('click', toggleSpan2)
     
     function addFadeIn() {
       const projectElement = document.getElementById('project')

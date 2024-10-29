@@ -11,6 +11,11 @@ templates = Jinja2Templates(directory="./templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def get_profile(request: Request):
+    return templates.TemplateResponse("pages/_base.html", {"request": request})
+
+
+@app.get("/profile", response_class=HTMLResponse)
+async def get_profile(request: Request):
     return templates.TemplateResponse("pages/profile.html", {"request": request})
 
 
@@ -41,3 +46,8 @@ async def get_profile(request: Request):
 @app.get("/games", response_class=HTMLResponse)
 async def get_profile(request: Request):
     return templates.TemplateResponse("pages/projects/games.html", {"request": request})
+
+
+@app.get("/lego", response_class=HTMLResponse)
+async def get_profile(request: Request):
+    return templates.TemplateResponse("pages/projects/lego.html", {"request": request})

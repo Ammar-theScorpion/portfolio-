@@ -1,0 +1,199 @@
+{% extends 'pages/_base.html' %}
+{% block title %}
+  About
+{% endblock %}
+
+{% block header %}
+  {% include './headers/back.html' %}
+  <div class="flex justify-center items-center h-3/5">
+    <div class="flex justify-center space-x-[-20px] w-3/4 max-md:gap-20 max-md:mx-10 max-md:flex-col">
+      <div class="relative rounded-lg">
+        <video autoplay muted loop class="h-auto max-w-full border-2 rounded-lg border-[#eceff1]">
+          <source src="static/video/lego/draw1.mp4" type="video/mp4" />Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="relative z-10 rounded-lg -translate-y-10">
+        <img src="static/images/lego/mainbg.png" class="h-auto max-w-full border-2 rounded-lg border-[#eceff1]" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center justify-center"></div>
+{% endblock %}
+
+{% block content %}
+  <div class="flex items-center justify-center flex-col">
+    <div class="w-3/4 max-md:mx-8 max-md:w-full">
+      <div class="flex -translate-y-8 flex-col">
+        <div class="">
+          <div id="icon" class="h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-pink-400 p-1 max-w-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="37" width="37" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+              <path style="fill:#2C6991;" d="M255.403,220.142c-9.301,0-16.842-7.541-16.842-16.842v-23.874c0-36.932,30.047-66.98,66.98-66.98  h125.345c11.118,0,20.163-9.045,20.163-20.163c0-11.119-9.045-20.164-20.163-20.164H401.67c-9.301,0-16.842-7.541-16.842-16.842  s7.541-16.842,16.842-16.842h29.215c29.692,0,53.848,24.156,53.848,53.849c0,29.692-24.156,53.848-53.848,53.848H305.54  c-18.359,0-33.296,14.937-33.296,33.296V203.3C272.245,212.601,264.704,220.142,255.403,220.142z" />
+              <path style="fill:#ABA8AB;" d="M286.316,225.713h-61.754c-9.301,0-16.842-7.541-16.842-16.842s7.541-16.842,16.842-16.842h61.754  c9.301,0,16.842,7.541,16.842,16.842S295.617,225.713,286.316,225.713z" />
+              <path style="fill:#CCCCCC;" d="M256,225.713h-31.439c-9.301,0-16.842-7.541-16.842-16.842s7.541-16.842,16.842-16.842H256V225.713z" />
+              <path style="fill:#4AD0FF;" d="M398.056,214.485H113.944C51.01,214.485,0,265.882,0,328.814v28.86  c0,46.498,21.996,88.13,56.182,106.207c28.626,15.137,61.712,12.217,93.835-7.993h211.828c18.55,12.351,37.452,17.679,55.628,17.679  c13.345,0,26.206-3.136,38.34-9.546C490.002,445.958,512,404.281,512,357.775v-28.961C512,265.882,460.99,214.485,398.056,214.485z" />
+              <path style="fill:#99E5FF;" d="M256,214.485H113.944C51.01,214.485,0,265.882,0,328.814v28.86c0,46.498,21.996,88.13,56.182,106.207  c28.626,15.137,61.712,12.217,93.835-7.993H256V214.485z" />
+              <path style="fill:#2C6991;" d="M151.579,317.784h-14.596v-14.596c0-9.301-7.541-16.842-16.842-16.842s-16.842,7.541-16.842,16.842  v14.596H88.702c-9.301,0-16.842,7.541-16.842,16.842s7.541,16.842,16.842,16.842h14.596v14.596c0,9.301,7.541,16.842,16.842,16.842  s16.842-7.541,16.842-16.842v-14.596h14.596c9.301,0,16.842-7.541,16.842-16.842S160.88,317.784,151.579,317.784z" />
+              <path style="fill:#528FB3;" d="M120.14,286.345c-9.301,0-16.842,7.541-16.842,16.842v14.596H88.702  c-9.301,0-16.842,7.541-16.842,16.842s7.541,16.842,16.842,16.842h14.596v14.596c0,9.301,7.541,16.842,16.842,16.842V286.345z" />
+              <path style="fill:#ABA8AB;" d="M228.491,390.766h-24.702c-9.301,0-16.842-7.541-16.842-16.842s7.541-16.842,16.842-16.842h24.702  c9.301,0,16.842,7.541,16.842,16.842S237.793,390.766,228.491,390.766z" />
+              <path style="fill:#CCCCCC;" d="M215.579,390.766h-11.789c-9.301,0-16.842-7.541-16.842-16.842s7.541-16.842,16.842-16.842h11.789  V390.766z" />
+              <circle style="fill:#FB5858;" cx="393.016" cy="365.676" r="19.491" />
+              <path style="fill:#FF835D;" d="M393.013,385.162c-10.764,0-19.491-8.726-19.491-19.491c0-10.764,8.726-19.491,19.491-19.491V385.162  z" />
+              <path style="fill:#ABA8AB;" d="M308.211,390.766h-24.702c-9.301,0-16.842-7.541-16.842-16.842s7.541-16.842,16.842-16.842h24.702  c9.301,0,16.842,7.541,16.842,16.842S317.512,390.766,308.211,390.766z" />
+              <path style="fill:#CCCCCC;" d="M295.298,390.766h-11.789c-9.301,0-16.842-7.541-16.842-16.842s7.541-16.842,16.842-16.842h11.789  V390.766z" />
+              <circle style="fill:#FB5858;" cx="426.7" cy="320.752" r="19.491" />
+              <path style="fill:#FF835D;" d="M426.699,340.246c-10.764,0-19.491-8.726-19.491-19.491c0-10.764,8.726-19.491,19.491-19.491V340.246  z" />
+            </svg>
+          </div>
+
+          <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-3xl font-bold tracking-tight text-gray-900 text-transparent">Visual Programming</div>
+          <div class="mb-10 text-lg font-bold text-[#5e5e63]">Create animations, solve problems, generate Python/C++ code with drag-and-drop blocks.</div>
+        </div>
+      </div>
+
+      <div class="mt-6 items-center flex justify-center mb-10">
+        <div class="w-3/4 max-md:w-full">
+          <div class="bg-white border-2 rounded-xl shadow-lg">
+            <div class="px-8 py-4">
+              <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-lg font-bold tracking-tight text-gray-900 text-transparent mb-5">PROBLEM</div>
+
+              <p class="text-lg">Many beginner programmers struggle with syntax, spending more time worrying about writing code correctly rather than focusing on problem-solving and logical thinking. We realized that this focus on syntax often hinders the learning process, preventing them from fully understanding how to solve problems effectively. This project was created to shift that focus entirely to logic. By dragging and dropping blocks, users can apply their logic visually without writing a single line of code. Additionally, creating visual outputs or drawings is just as easy, allowing for a seamless, syntax-free learning experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-5 gap-12 flex-col bg-white rounded-xl shadow-lg border-2">
+        <p class="mb-5 text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-lg font-bold tracking-tight text-gray-900 text-transparent">The Blocks, How does the app generate code from the blocks, and how are drawings created?</p>
+        <div class="items-start justify-start flex gap-16">
+          <div class="flex items-center justify-center gap-6 flex-col">
+            <img src="static/images/lego/bg.png" class="h-auto max-w-full border-2 rounded-lg border-[#eceff1]" alt="" />
+          </div>
+        </div>
+
+        <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
+          <div class="items-center justify-center">
+            <div class="flex items-center justify-center gap-6 max-lg:flex-col">
+              <div class="flex gap-11">
+                <div class="flex-none bg-[#f6f6f6] items-center w-9 h-9 font-semibold text-[#fd4e4e] rounded-full leading-[1.5] flex justify-center">1</div>
+                <div class="flex flex-col text-[#5e5e63] leading-8 text-lg">
+                  <p>
+                    <span class="text-red-500">First,</span> select blocks from the block list and drag them into the code area to build your logic. Each block represents a fundamental coding concept, like loops, conditions, or functions, allowing you to visually structure your program.
+                  </p>
+                </div>
+              </div>
+
+              <video autoplay muted loop class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]">
+                <source src="static/video/lego/inaction1.mp4" type="video/mp4" />Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="items-start justify-start flex mt-5 flex-row gap-16 max-md:flex-col">
+          <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center max-lg:flex-col gap-11">
+              <img src="static/images/lego/stage2.png" class="w-[25rem] h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
+
+              <div class="flex gap-11">
+                <div class="flex-none items-center w-9 h-9 font-semibold text-[#fd4e4e] bg-[#f6f6f6] rounded-full leading-[1.5] flex justify-center">2</div>
+                <div class="text-lg flex flex-col text-[#5e5e63] leading-8 items-center justify-center">
+                  <p>
+                    <span class="text-red-500">Block Stage:</span> Each block is then processed in this stage, where the text is extracted and its unique ID is mapped to <span class="text-red-500">predefined identifiers.</span> For example, special variables are mapped to types like <span class="text-red-500">'allFatherL'</span> for lists and <span class="text-red-500">'allFather'</span> for primitive types. This mapping ensures that the app understands the intended functionality of each block within the generated code.
+                  </p>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
+          <div class="items-center justify-center">
+            <div class="flex items-center justify-center gap-6 max-lg:flex-col">
+              <div class="flex gap-11">
+                <div class="flex-none bg-[#f6f6f6] items-center w-9 h-9 font-semibold text-[#fd4e4e] rounded-full leading-[1.5] flex justify-center">3</div>
+                <div class="flex flex-col text-[#5e5e63] leading-8 text-lg">
+                  <p>
+                    <span class="text-red-500">Lexical Stage:</span> the lexical analysis stage involves scanning the input code to convert it into a sequence of tokens, which are the basic building blocks of the code. <span class="text-red-500">The output</span> from the Block Stage is then tokenized into an object, assigning a unique number to each token along with its corresponding value.
+                  </p>
+                </div>
+              </div>
+
+              <img src="static/images/lego/stage3.png" class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
+            </div>
+          </div>
+        </div>
+
+        <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
+          <div class="items-center justify-center">
+            <div class="flex items-center justify-center gap-6 max-lg:flex-col">
+              <img src="static/images/lego/stage4.png" class="w-auto max-w-96 h-auto max-md:w-full rounded-xl shadow-lg transform hover:scale-105 transition duration-300 border-2 border-[#eceff1]" />
+
+              <div class="flex gap-11">
+                <div class="flex-none bg-[#f6f6f6] items-center w-9 h-9 font-semibold text-[#fd4e4e] rounded-full leading-[1.5] flex justify-center">4</div>
+                <div class="flex flex-col text-[#5e5e63] leading-8 text-lg">
+                  <p>
+                    <span class="text-red-500">Parser Stage:</span>In this stage, the code is analyzed to determine its grammatical structure. During parsing, a symbol table is created, which maintains a record of all the objects that the list holds, as well as the environment in which the list is defined. This allows the app to keep track of the scope, ensuring that each variable or function can be accessed appropriately within its defined context. The symbol table serves as a crucial data structure in the parser, storing information about identifiers, such as variables and functions, along with their attributes like data type, scope level, and memory location. This enables efficient management of variable states and helps prevent naming conflicts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex max-lg:flex-col gap-4">
+          <div class="flex flex-col text-[#5e5e63] leading-8 text-lg">
+            <p>
+              <span class="text-red-500">AST:</span> The parser also generates an Abstract Syntax Tree (AST) that represents the hierarchical structure of the code. From this AST, the app checks the grammars for both C++ and Python.
+              <span class="text-lg text-red-500">Notice that there's no need to define variable types or the function return type in C++; these are auto-generated after creating and traversing the AST.</span>
+
+              During this traversal, the app verifies various aspects, such as:
+            </p>
+            <div>
+              <li>Whether arithmetic expressions are valid</li>
+              <li>Whether variables are defined and accessible within their scope</li>
+              <li>Whether variable names are permissible</li>Additionally, the parser can prevent minor errors by assigning default values to variables that the user did not define. This ensures that the code runs smoothly without unexpected behavior. Throughout this process, the app provides live feedback to the user, highlighting any errors in the code to facilitate a smoother programming experience.
+            </div>
+          </div>
+          <img src="static/images/lego/result.png" class="w-[35rem] max-lg:w-full h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
+        </div>
+
+        <div class="items-start justify-start flex mt-10 flex-row gap-16 max-md:flex-col mb-24">
+          <div class="items-center justify-center">
+            <div class="flex items-center justify-center gap-6 max-lg:flex-col">
+              <img src="static/images/lego/stage5.png" class="w-96 h-auto rounded-xl shadow-lg transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
+
+              <div class="flex gap-11">
+                <div class="flex-none bg-[#f6f6f6] items-center w-9 h-9 font-semibold text-[#fd4e4e] rounded-full leading-[1.5] flex justify-center">5</div>
+                <div class="flex flex-col text-[#5e5e63] leading-8 text-lg">
+                  <p>
+                    <span class="text-red-500">Code Generation:</span> After validating the code, the Abstract Syntax Tree (AST) is converted into C++ and Python code by mapping the predefined variables and structures into suitable constructs for each language. This mapping ensures that the logical flow and functionality represented in the AST are accurately translated into syntactically correct code that adheres to the rules and conventions of both C++ and Python. The result is a seamless generation of executable code that reflects the user's intended logic as represented by the blocks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 max-md:mt-2 rounded-xl shadow-xl bg-[#f1f1f1] border-2 p-5">
+        <p class="mb-5 bg-gradient-to-l from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text text-2xl font-bold">The Blocks, Drawing</p>
+        <div class="flex items-center justify-center w-full h-auto max-md:w-full max-md:flex-col">
+          <div class="relative rounded-lg max-md:mx-0 mx-10 justify-center items-center flex flex-col">
+            <video autoplay muted loop class="w-auto max-h-72 h-auto rounded-xl transform hover:scale-105 transition duration-300">
+              <source src="static/video/lego/draw1.mp4" type="video/mp4" />Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col max-md:mx-0">
+            <video autoplay muted loop class="w-auto max-h-72 h-auto rounded-xl transform hover:scale-105 transition duration-300">
+              <source src="static/video/lego/draw3.mp4" type="video/mp4" />Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <p class="mt-5 bg-gradient-to-l from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text text-lg font-bold">After generating the executable code in Python, a WebSocket communication is established between the backend and the frontend. Each drawing command generated from the blocks is sent to JavaScript for processing. This allows the app to control the drawing interface, moving the turtle to specified coordinates and executing drawing instructions such as creating lines, shapes, or other visual elements. As each block is processed, the corresponding visual output is rendered in real time, providing users with immediate feedback and allowing them to see their logic and creativity come to life through interactive drawings.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,15 +1,53 @@
-{% extends 'pages/_base.html' %}
-{% block title %}
-  About
-{% endblock %}
-{% block content %}
-  Hi again, I'm Olivier. I’m a product designer living in Brooklyn, interested in how people and software can work together to make life better. I'm currently at Snap, where I design experiences around finding and using AR Lenses on Snapchat.
+<div class="justify-center items-center flex mb-10 max-md:flex-col">
+  <div class="w-2/4 max-md:w-full mx-10 mt-5">
+    <div class="text-[#323235] text-lg leading-8">
+      <span class="bg-gradient-to-l from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text text-5xl">Hello again!</span> 👋
+      <br />
+      <div class="mt-8"></div>I'm Ammar Assi from Nablus, Palestine. I graduated from An-Najah University in 2023 with a degree in Computer Science, and I'm currently 24 years old. I am passionate about technology, especially in the fields of software development, data science, and computer graphics.
+      <br />
+      <div class="mt-5"></div>
+      <span class="text-2xl font-bold">Education & Early Interests</span>
+      <br />
+      <div class="mt-5"></div>During my time at university, I developed a strong interest in computer graphics, creating several games and animations as personal projects. I also pursued multiple internships and training programs to broaden my skills:
+      <br />
+      <div class="mt-5"></div> <li>
+        <span class="text-xl text-red-300">Software Development</span> Internship at Equitable I had the opportunity to work as an intern, where I built a Twitter clone using Javalin, a lightweight web framework for Java. This experience helped me understand web development from the ground up.
+      </li>
+      <br />
+      <div class="mt-5"></div>
+      <li>
+        <span class="text-xl text-red-300">Data Science Training</span> I took a comprehensive training program in data science, during which I developed an e-commerce website with an integrated chatbot, along with other data-driven projects.
+      </li>
+      <br />
+      <div class="mt-5"></div><span class="text-xl font-bold">Freelancing Experience</span>
+      <br />
+      <div class="mt-5"></div>After completing my training, I worked on a freelance project with MeNow Company, where I developed a solution to detect the effectiveness of drugs on the skin. This was my first real-world programming project, and it allowed me to apply my skills in a practical setting, solving real problems.
+      <br />
+      <div class="mt-5"></div>
+      <span class="text-xl font-bold">Current Role at An-Najah University</span>
+      <br />
+      <div class="mt-5"></div>I am currently employed at An-Najah University, where I've been working for almost a year. In my role, I have contributed to various projects in both mobile and web development. My work includes enhancing user experience on the university's digital platforms and developing solutions that improve the overall functionality and performance of the university’s systems.
+      <br />
+      <div class="mt-5"></div>
+      <span class="text-xl font-bold">Interests & Ongoing Learning</span>
+      <br />
+      <div class="mt-5"></div>I am an avid reader who enjoys exploring topics related to data science, natural language processing (NLP), and software development best practices, particularly in Django. I believe continuous learning is key to staying ahead in the fast-paced world of technology, and I make it a priority to keep updating my knowledge and skills.
+      <br />
+      <div class="mt-5"></div>
+      <span class="bg-gradient-to-l from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text text-xl font-bold">Looking Forward</span>
+      I am always open to new opportunities and challenges that allow me to grow and refine my expertise in the tech industry. Feel free to reach out to discuss potential collaborations, projects, or just to connect!
+    </div>
+  </div>
 
-  I previously worked at ZipRecruiter, where I designed experiences and interfaces to help millions of people get jobs. I started on the marketing design side, honing my visual design skills and learning the ins and outs of keyframe animation, then moved into the world of product.
+  <div id="popup" onclick="closePopup()" class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 backdrop-blur-sm">
+    <div class="relative bg-white p-6 rounded-lg shadow-lg max-w-4xl w-full h-[80vh]">
+      <iframe class="rounded-md w-full h-full" src="/static/folders/EDentist-Object Detection.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=FitH" style="border: none;"></iframe>
+      <span class="absolute top-3 right-3 text-2xl text-gray-600 cursor-pointer bg-white p-1 rounded-full hover:bg-gray-200 transition" onclick="closePopup()">×</span>
+    </div>
+  </div>
 
-  As a designer, I enjoy being a generalist with a focus on craft and prototyping. I value beautiful visuals backed by smart systems thinking. I love the concept that a digital product is a living thing that can adapt and evolve over time.
-
-  Outside of design, I love food in all capacities. I spend my time exploring new restaurants, cooking new dishes, and talking about my next meal. I think a lot about the Arizona Cardinals, well-executed civil engineering, and my dog Olive (no, she wasn’t named after me).
-
-  If you want to chat, feel free to reach out.
-{% endblock %}
+  <div class="px-6 pt-5 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10 mb-11 flex flex-col items-center">
+    <p class="bg-gradient-to-l from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text text-4xl">My CV</p>
+    <img src="static/images/cv.png" class="transform transition-transform duration-300 hover:scale-105 cursor-pointer rounded-lg shadow-lg my-5" onclick="openPopup()" alt="my cv" />
+  </div>
+</div>

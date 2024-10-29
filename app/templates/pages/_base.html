@@ -12,11 +12,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
   </head>
+  {% block header %}
+    {% include './headers/main-header.html' %}
+  {% endblock %}
+
   <body class="bg-[#f6f6f6]">
     {% block content %}
-
+      {% include './pages/profile.html' %}
     {% endblock %}
+
+    {% include './sections/footer/contact.html' %}
   </body>
 
-  <script src="static/js/base.js"></script>
+  {% block scripts %}
+    <script src="static/js/base.js"></script>
+    <script src="static/js/popup.js"></script>
+  {% endblock %}
 </html>

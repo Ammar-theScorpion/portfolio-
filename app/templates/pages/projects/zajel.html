@@ -2,18 +2,19 @@
 {% block title %}
   About
 {% endblock %}
+{% block header %}
+{% include './headers/back.html' %}
+  <div class="flex justify-center items-center h-3/5">
+      <img src="/static/images/zajel/bg2.jpg" class="transition-all hover:scale-105 bg-contain z-30 translate-x-16 h-auto w-60 rounded-3xl shadow-2xl -rotate-12" alt="" />
+      <img src="/static/images/zajel/logo1.jpg" class="transition-all hover:scale-105 h-full w-60 rounded-3xl shadow-xl rotate-12" alt="" />
+  </div>
+{% endblock %}
+
 {% block content %}
  
-  {% include './headers/back.html' %}
-  {% block header %}
-    <div class="flex justify-center items-center h-3/5">
-        <img src="/static/images/zajel/logo2.png" class="transition-all hover:scale-105 bg-contain z-30 translate-x-16 h-[27rem] w-72 rounded-3xl shadow-2xl -rotate-[8deg]" alt="" />
-        <img src="/static/images/zajel/logo1.jpg" class="transition-all hover:scale-105 h-full w-56 rounded-3xl shadow-xl rotate-[10deg]" alt="" />
-    </div>
-  {% endblock %}
-  <div class="flex items-center justify-center flex-col -translate-y-5">
+  <div class="flex items-center justify-center flex-col ">
     <div class="w-3/4 mx-8 max-md:w-full">
-      <div class="flex -translate-y-8 flex-col">
+      <div class="flex -translate-y-8 flex-col max-md:mx-10">
         <div class="">
           <div id="icon" class="h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-slate-300 p-1 max-w-xl">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class="h-10 w-10">
@@ -86,15 +87,15 @@
       </div>
 
       <div class="mt-16">
-        <div class="flex flex-row max-md:flex-col items-center justify-center">
+        <div class="flex flex-row max-md:flex-col items-center justify-center gap-10">
           <div class="flex items-center justify-center flex-col max-md:w-full">
             <video autoplay muted loop class="w-80 h-full rounded-2xl shadow-xl border-2 border-[#eceff1] object-cover">
               <source src="static/video/zajel/old_zajel_courses.mp4" type="video/mp4" />Your browser does not support the video tag.
             </video>
             <div class="mt-5 text-[#5e5e63] text-lg leading-8">Old Version</div>
           </div>
-          <div class="flex items-center justify-center w-2/4 flex-col max-md:w-full">
-            <video autoplay muted loop class="h-full w-80 border-2 border-[#eceff1] rounded-2xl shadow-xl">
+          <div class="flex items-center justify-center flex-col max-md:w-full">
+            <video autoplay muted loop class="w-80 h-full rounded-2xl shadow-xl border-2 border-[#eceff1] object-cover">
               <source src="static/video/zajel/new_zajel_courses.mp4" type="video/mp4" />Your browser does not support the video tag.
             </video>
             <div class="mt-5 text-[#5e5e63] text-lg leading-8">New Version</div>
@@ -102,12 +103,10 @@
         </div>
       </div>
 
-      <div class="items-center justify-center flex mt-8 flex-col">
-        <div class="w-2/4 text-[#5e5e63] text-lg leading-8">We had spent years tolerating the suboptimal design and were ready for a change. There was a laundry list of usability and visual issues that needed to be addressed;</div>
-      </div>
+
 
       <div class="items-start justify-start flex mt-14 flex-row gap-16 max-md:flex-col bg-white rounded-xl shadow-xl">
-        <div class=" sticky top-20 pl-4 max-md:w-full bg-white max-md:top-5">
+        <div class=" sticky top-20 pl-4 max-md:w-full bg-white max-md:top-5 rounded-xl shadow-xl">
           <div class=" flex items-center justify-center">
             <img class="h-full w-80 max-md:w-60  border-2 rounded-lg border-[#eceff1] object-contain" src="/static/images/zajel/1.png" alt="" />
           </div>
@@ -163,21 +162,42 @@
         </div>
       </div>
 
-      <div class="mt-10">
-        <div class="flex mb-10 justify-center items-center">
-          <div class="text-[#5e5e63] text-xl leading-8">Another Example</div>
+      <div class="mt-16 bg-[#f1f1f1] rounded-xl shadow-xl border-2 p-8">
+        <div class="flex justify-center items-center">
+          <p class=" mb-5 text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-lg font-bold tracking-tight text-gray-900 text-transparent ">More examples</p>
         </div>
-        <div class="flex flex-row max-md:flex-col items-center justify-center">
+        <div class="flex flex-row max-md:flex-col items-center justify-center gap-10">
           <div class="flex items-center justify-center flex-col max-md:w-full">
-            <img src="/static/images/zajel/old_log.jpg" class="w-72 h-full rounded-xl shadow-xl border-2  border-[#eceff1] object-cover" alt="" />
-            <div class="mt-5 text-[#5e5e63] text-lg leading-8">Old Version</div>
+            <video autoplay muted loop class="w-80 h-auto rounded-2xl shadow-xl border-2 border-[#eceff1] object-cover">
+              <source src="static/video/zajel/comp1.mp4" type="video/mp4" />Your browser does not support the video tag.
+            </video>
+            <div class="mt-5 text-[#5e5e63] text-lg leading-8">Old Version<span class="text-red-300"> (Student's Marks)</span></div>
           </div>
-          <div class="flex items-center justify-center w-2/4 flex-col max-md:w-full">
-            <img src="/static/images/zajel/new_log.jpg" class="w-72 h-full rounded-xl shadow-xl border-2 border-[#eceff1] object-cover" alt="" />
-            <div class="mt-5 text-[#5e5e63] text-lg leading-8">New Version</div>
+          <div class="flex items-center justify-center flex-col max-md:w-full">
+            <video autoplay muted loop class="w-80 h-auto border-2 border-[#eceff1] rounded-2xl shadow-xl">
+              <source src="static/video/zajel/comp2.mp4" type="video/mp4" />Your browser does not support the video tag.
+            </video>
+            <div class="mt-5 text-[#5e5e63] text-lg leading-8">New Version<span class="text-red-300"> (Student's Marks)</span></div>
           </div>
         </div>
+
+
+
+  
+        <div class="flex flex-row max-md:flex-col items-center justify-center gap-10">
+          <div class="flex items-center justify-center flex-col max-md:w-full">
+            <img src="static/images/zajel/old_log.jpg" class="w-80 h-auto rounded-2xl shadow-xl border-2 border-[#eceff1] object-cover">
+            <div class="mt-5 text-[#5e5e63] text-lg leading-8">Old Version<span class="text-red-300"> (Login Page)</span></div>
+          </div>
+          <div class="flex items-center justify-center flex-col max-md:w-full">
+            <img src="static/images/zajel/new_log.jpg" class="w-80 h-auto rounded-2xl shadow-xl border-2 border-[#eceff1] object-cover">
+            <div class="mt-5 text-[#5e5e63] text-lg leading-8">New Version<span class="text-red-300"> (Login page)</span></div>
+          </div>
+        </div>
+
+
       </div>
+
     </div>
 
     <div class="bg-white mt-10 justify-center items-center w-full flex">
@@ -267,5 +287,4 @@
     </div>
 
   </div>
-  {% include "/sections/footer/contact.html" %}
 {% endblock %}
