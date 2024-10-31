@@ -1,5 +1,5 @@
 <div>
-  <header class="inset-x-0 top-0 z-50 sticky">
+  <header class="inset-x-0 top-0 z-40 sticky">
     <nav class="flex items-center justify-center p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1"></div>
 
@@ -31,7 +31,7 @@
   <script>
     // Select the spans
     function toggleSpan2() {
-      span2.classList.remove('bg-gradient-to-l', 'from-indigo-500', 'via-red-500', 'to-blue-500', 'text-transparent', 'bg-clip-text')
+      span2.classList.remove('text-[#6f6f75]')
       span2.classList.add('bg-white')
     
       span1.classList.remove('bg-white')
@@ -40,6 +40,7 @@
     
     function toggleSpan1() {
       span2.classList.remove('bg-white')
+      span2.classList.add('text-[#6f6f75]')
     
       span1.classList.add('bg-white')
       span1.classList.remove('text-[#6f6f75]')
