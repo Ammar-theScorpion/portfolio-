@@ -1,19 +1,32 @@
-window.addEventListener('scroll', function () {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-    const maxScrollTo = document.getElementById('imageHeader').offsetTop-50 || 500;
-    console.log(maxScrollTo)
-    const opacity = Math.max(0.0, 1 - scrollTop / maxScrollTo)
-    const yPosition = Math.min(maxScrollTo, scrollTop / 2)
-    const scale = Math.max(1, Math.min( 1+ scrollTop / 1000, 1.4))
-    if(opacity === 0){
-    }else{
-        document.querySelector('.fade-header').style.opacity = opacity
-        document.querySelector('.fade-header').style.transform = `translateY(${yPosition}px)`
-        document.querySelector('#projectails').style.transform = `scale3d(${scale}, ${scale}, 1)`;
-        document.querySelector('#projectails').style.opacity = opacity;
+let ticking = false;
+
+function onScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const maxScrollTo = document.getElementById('imageHeader').offsetTop - 50 || 500;
+    const opacity = Math.max(0.0, 1 - scrollTop / maxScrollTo);
+    const yPosition = Math.min(maxScrollTo, scrollTop / 2);
+    const scale = Math.max(1, Math.min(1 + scrollTop / 1000, 1.4));
+
+    if (opacity !== 0) {
+        const fadeHeader = document.querySelector('.fade-header');
+        const projectails = document.querySelector('#projectails');
+        
+        fadeHeader.style.opacity = opacity;
+        fadeHeader.style.transform = `translateY(${yPosition}px)`;
+        projectails.style.transform = `scale3d(${scale}, ${scale}, 1)`;
+        projectails.style.opacity = opacity;
     }
 
+    ticking = false;
+}
+
+window.addEventListener('scroll', function() {
+    if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+    }
 });
+
 
 
 /*

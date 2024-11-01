@@ -7,22 +7,16 @@
         <div class="flex items-center justify-center shadow-xl rounded-full bg-[#f6f6f6]">
           <a hx-target="#project" hx-get="/profile" hx-swap="innerHTML" hx-trigger="click" id="span1" class="m-2 cursor-pointer select-none rounded-full bg-white p-3 font-bold shadow-lg px-6 transition-all active:scale-90">Work</a>
           <a id="span2" class="m-2 cursor-pointer select-none rounded-full p-3 font-bold shadow-lg px-6 transition-all active:scale-90" hx-get="/about" hx-target="#project" hx-swap="innerHTML" hx-trigger="click" hx-on="htmx:beforeSwap: addFadeIn()">About</a>
-
-          <!-- Element where content will be loaded -->
         </div>
       </div>
 
       <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
     </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
   </header>
   <div class="relative isolate px-6 lg:px-8 -top-36">
     <div class="absolute inset-x-0 -top-80 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
       <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-800 via-slate-700 to-gray-800 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
-    {% block header %}
-
-    {% endblock %}
     <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
       <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
@@ -52,11 +46,11 @@
     
     function addFadeIn() {
       const projectElement = document.getElementById('project')
-      projectElement.classList.add('opacity-0') // Ensure it starts as hidden
+      projectElement.classList.add('opacity-0')
       setTimeout(() => {
-        projectElement.classList.remove('opacity-0') // Fade it in
+        projectElement.classList.remove('opacity-0')
         projectElement.classList.add('opacity-100')
-      }, 50) // Small delay to ensure transition works properly
+      }, 50)
     }
   </script>
 </div>

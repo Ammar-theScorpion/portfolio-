@@ -5,14 +5,14 @@
 {% block header %}
   {% include './headers/back.html' %}
   <div class="flex justify-center items-center h-3/5">
-    <div class="flex justify-center space-x-[-20px] max-md:mx-10">
-      <div class="relative rounded-lg">
-        <video autoplay muted loop class="w-auto h-auto max-w-72 border-2 rounded-xl border-[#eceff1]">
+    <div class="flex justify-center space-x-[-20px] max-md:mx-4 max-sm:space-x-2">
+      <div class="relative rounded-lg w-2/4 max-sm:w-[45%]">
+        <video autoplay muted loop class="w-full h-auto max-w-96 border-2 rounded-xl border-[#eceff1] object-cover">
           <source src="static/video/games/3d.mp4" type="video/mp4" />Your browser does not support the video tag.
         </video>
       </div>
-      <div class="relative z-10 rounded-xl -translate-y-10">
-        <video autoplay muted loop class="w-auto h-auto max-w-72 border-2 rounded-lg border-[#eceff1]">
+      <div class="relative z-10 rounded-xl w-2/4 max-sm:w-[45%] max-sm:-translate-y-5 -translate-y-10">
+        <video autoplay muted loop class="w-full h-auto max-w-96 border-2 rounded-lg border-[#eceff1] object-cover">
           <source src="static/video/games/chess.mp4" type="video/mp4" />Your browser does not support the video tag.
         </video>
       </div>
