@@ -1,18 +1,18 @@
 {% extends 'pages/_base.html' %}
 {% block title %}
-  About
+  games
 {% endblock %}
 {% block header %}
   {% include './headers/back.html' %}
   <div class="flex justify-center items-center h-3/5">
-    <div class="flex justify-center space-x-[-20px] w-3/4 max-md:gap-20 max-md:mx-10 max-md:flex-col">
+    <div class="flex justify-center space-x-[-20px] max-md:mx-10">
       <div class="relative rounded-lg">
-        <video autoplay muted loop class="h-auto max-w-full border-2 rounded-xl border-[#eceff1]">
+        <video autoplay muted loop class="w-auto h-auto max-w-72 border-2 rounded-xl border-[#eceff1]">
           <source src="static/video/games/3d.mp4" type="video/mp4" />Your browser does not support the video tag.
         </video>
       </div>
       <div class="relative z-10 rounded-xl -translate-y-10">
-        <video autoplay muted loop class="h-auto max-w-full border-2 rounded-lg border-[#eceff1]">
+        <video autoplay muted loop class="w-auto h-auto max-w-72 border-2 rounded-lg border-[#eceff1]">
           <source src="static/video/games/chess.mp4" type="video/mp4" />Your browser does not support the video tag.
         </video>
       </div>
@@ -45,7 +45,7 @@
             </svg>
           </div>
 
-          <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-3xl font-bold tracking-tight text-gray-900 text-transparent">Games, Animations and Simulations</div>
+          <div class="text-balance bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-3xl max-sm:text-lg font-bold tracking-tight text-gray-900 text-transparent">Games, Animations and Simulations</div>
           <div class="mb-10 text-lg font-bold text-[#5e5e63]">Some of Games and Animations I made</div>
         </div>
       </div>
@@ -201,12 +201,12 @@
                   <div class="flex flex-col">
                     <div class="flex items-center justify-center w-full h-auto max-md:w-full max-md:flex-col">
                       <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
-                        <img src="static/images/chess/chess 3.png" alt="Dog" class="w-auto max-h-96 h-auto rounded-xl transform hover:scale-105 transition duration-300" />
+                        <img loading="lazy" src="static/images/chess/chess 3.png" alt="Dog" class="w-auto max-h-96 h-auto rounded-xl transform hover:scale-105 transition duration-300" />
                         <div class="mt-5 text-[#5e5e63] text-lg leading-8">Queued Games</div>
                       </div>
 
                       <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
-                        <img src="static/images/chess/chess 2.png" alt="Dog" class="w-auto max-h-96 h-auto rounded-xl transform hover:scale-105 transition duration-300" />
+                        <img loading="lazy" src="static/images/chess/chess 2.png" alt="Dog" class="w-auto max-h-96 h-auto rounded-xl transform hover:scale-105 transition duration-300" />
                         <span class="mt-5 text-[#5e5e63] text-lg leading-8">Go Online/Offline</span>
                       </div>
                     </div>
@@ -219,7 +219,7 @@
                       </div>
 
                       <div class="relative rounded-lg mx-10 justify-center items-center flex flex-col">
-                        <img src="static/images/chess/new message.png" alt="Dog" class="w-auto max-h-96 h-auto rounded-xl shadow-xl transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
+                        <img loading="lazy" src="static/images/chess/new message.png" alt="Dog" class="w-auto max-h-96 h-auto rounded-xl shadow-xl transform hover:scale-105 transition duration-300 max-w-full border-2 border-[#eceff1]" />
                         <span class="mt-5 text-[#5e5e63] text-lg leading-8">Online with messaging</span>
                       </div>
                     </div>
