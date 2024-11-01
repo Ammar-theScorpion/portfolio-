@@ -5,8 +5,14 @@
 {% block header %}
 {% include './headers/back.html' %}
   <div class="flex justify-center items-center h-3/5">
-      <img src="/static/images/zajel/bg2.jpg" class="transition-all hover:scale-105 bg-contain z-30 translate-x-16 h-auto w-60 rounded-3xl shadow-2xl -rotate-12" alt="" />
-      <img src="/static/images/zajel/logo1.jpg" class="transition-all hover:scale-105 h-full w-60 rounded-3xl shadow-xl rotate-12" alt="" />
+    <div class="flex justify-center space-x-[-20px] max-md:mx-4 max-sm:space-x-2">
+      <div class="relative rounded-lg w-2/4 max-sm:w-[45%]">
+        <img src="/static/images/zajel/bg2.jpg" class="w-full h-auto max-w-96 border-2 rounded-xl border-[#eceff1] object-cover">
+      </div>
+      <div class="relative z-10 rounded-xl w-2/4 max-sm:w-[45%] max-sm:-translate-y-5 -translate-y-10">
+        <img src="/static/images/zajel/logo1.jpg" class="w-full h-auto max-w-96 border-2 rounded-lg border-[#eceff1] object-cover">
+      </div>
+    </div>
   </div>
 {% endblock %}
 
