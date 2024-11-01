@@ -1,6 +1,7 @@
 let ticking = false;
 
 function onScroll() {
+    if (window.innerWidth < 768) return;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const maxScrollTo = document.getElementById('imageHeader').offsetTop - 50 || 500;
     const opacity = Math.max(0.0, 1 - scrollTop / maxScrollTo);
